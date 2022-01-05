@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_acceptance_criteria", "test_acceptance_criteria\test_acceptance_criteria.csproj", "{51FBE43D-CCFB-4C71-A068-BF08D444F86A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51FBE43D-CCFB-4C71-A068-BF08D444F86A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FBE43D-CCFB-4C71-A068-BF08D444F86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FBE43D-CCFB-4C71-A068-BF08D444F86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FBE43D-CCFB-4C71-A068-BF08D444F86A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53EEC16C-2497-4F10-97F0-889AE6CA1571}
+	EndGlobalSection
+EndGlobal
