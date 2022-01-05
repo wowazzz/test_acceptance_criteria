@@ -33,6 +33,7 @@ namespace test_acceptance_criteria
             public string FiatInCompanyNumber;
             public string UserPersonalNumber;
             public string SSN;
+            public string SomeEmptyField;
             public string RatsitFirstName;
             public string RatsitLastName;
             public string RatsitAddress;
@@ -57,6 +58,7 @@ namespace test_acceptance_criteria
             _data.TestResultCode = 3;
             _data.FiatInCompanyNumber = null;
             _data.UserPersonalNumber = "001-456345";
+            _data.SomeEmptyField = string.Empty;
             if (isRatsit)
             {
                 _data.SSN = _data.UserPersonalNumber;
@@ -107,6 +109,7 @@ namespace test_acceptance_criteria
             data["TestResultCode"] = 3;
             data["FiatInCompanyNumber"] = null;
             data["UserPersonalNumber"] = "001-456345";
+            data["SomeEmptyField"] = string.Empty;
             if (isRatsit)
             {
                 data["SSN"] = data["UserPersonalNumber"];
@@ -132,18 +135,20 @@ namespace test_acceptance_criteria
 
     internal class Program
     {
+        private static JsonSerializerSettings jsonNullIgnore
+            = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+
         private static string CreateData(object data)
         {
             return (data is null)
                 ? null
-                : JsonConvert.SerializeObject(data, Formatting.None,
-                    new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+                : JsonConvert.SerializeObject(data, Formatting.None, jsonNullIgnore);
         }
 
         static void Main(string[] args)
         {
             Settings settings;
-            settings.isRatsit = true;
+            settings.isRatsit = false;
 
             OldBaseTest oldTest = new OldTestDeposit(settings);
             if (oldTest.Test())
